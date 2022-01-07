@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            /**
+             * Tek bir Css Eklemek
+             * */
+            $("p").css('background-color', 'black')
+            /*
+            *Birden Çok Css Eklemek
+            */
+            $("a").css({
+                "background-color": "red",
+                "color": "white",
+                "padding": "10px"
+            });
+            $("button").css({
+                "background-color": "green",
+                "border-radius": "100%"
+            })
+            /**
+              * Elementin css özelliğini alma işlemi
+              */
+            var renk = $("button").css("background-color");
+            alert(renk);
+            /**
+             * Tekli Attribute kullanımı (Tag içini değiştirme)
+             */
+            $("a").attr("href", "https://www.ahmetcelik.web.tr");
+            /**
+             * Çoklu Attribute kullanımı (Tag içini değiştirme)
+             */
+            $("p").attr({
+                "name": "Ahmet",
+                "id": "kimlik"
+            })
+            /**
+             * Remover Attribute kullanımı (tag içinde özelliği kaldırma)
+             */
+            $("a").removeAttr("class", "ornekClass");
+            /**
+             * Attribute ile tag içindeki veriyi okumak
+             */ 
+            var url = $("a").attr("href");
+            alert(url);
+        });
+    </script>
+</head>
+
+<body>
+    <a href="#" class="ornekClass">Bu bir link</a>
+    <div class="container">Container classına Sahip Bir Div</div>
+    <div id="container">Container idsine sahip bir div</div>
+    <p>Bu bir parağraf</p>
+    <button>Bu bir button</button>
+</body>
+
+</html>
