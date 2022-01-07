@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Document</title>
+<script>
+    $(document).ready(function(){
+        $("#firstDiv").click(function(){
+            //This değişkeni  $("#firstDiv")'a eşittir.
+            $(this).after(' <div">Oluşan divlerden sadece biri</div>')
+
+        });
+        /**
+         * Bu fonksiyon ile tıklanan her elemandan kendinden sonra ekleme yapar.
+         */
+        $(document).on("click","button",function(){
+
+            $(this).after(' <button>Bana da Tıkla</button>');
+
+        })
+        /**
+         * Bu fonksiyon seçilen elementin içine en son kısmına ekleme yapar
+         */
+        $("p").click(function(){
+            $("#eklenecekVeriAlani").append('<td>Ben Tabloya Düştüm</td>');
+        })
+    })
+</script>
+
+
+</head>
+<body>
+    <div id="firstDiv">İlk Div Burada. Tıklarsan Sadece Bu Divin Arkasına Ekler En Sona Eklemez Ve Bir Tane Daha Olur</div>
+    <button>Bana Tıkla</button>
+    <table border="1">
+        <p style="background-color: coral; color: black; padding: 10px; text-align: center;">Bana tıkla tabloya düşeyim</p>
+        <tr id="eklenecekVeriAlani">
+           
+        </tr>
+    </table>
+</body>
+</html>

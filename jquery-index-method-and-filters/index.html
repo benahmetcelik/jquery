@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Document</title>
+</head>
+<script>
+    $(document).ready(function(){
+
+/**
+ * Bu fonksiyon sayfa içerisinde belirttiğimiz özelliklere sahip elementi seçip o element ile işlem yapmay yarar. Örneğin online quiz sitesi oluşturduğumuzu varasyalaım. 
+ * Yanlış cevabı kırmızı ile göstermek istiyorsunuz. 
+ * Cevaplar listesinde yanlış cevabın kaçıncı index numarasına sahip olduğunu öğrenip onun içerisine aşağıdaki gibi css ekleyerek kırmızı yapabiliriz.
+ */
+ $(".liste li:eq(2)").css("color","red");
+
+
+
+
+$(".liste li").click(function(){
+    var indis = $(this).index();
+/**
+ * Bu satır eq filtresine ihtiyaç duyuyor dilerseniz kaldırabilirsiniz.
+ *  $(".liste li:eq("+indis+")").css("color","red");
+ */
+    $(".liste li:eq("+indis+")").css("color","red");
+    alert(indis);
+})
+
+
+
+/**
+ * last ve first metodları sayfada özelliğini verdiğimiz elementten kaç tane varsa bunları sayar ve bize son ve ilk indise sahip elemanları döndürür.
+ */
+$(".liste li:last").css("color","green").text("Son Eleman");
+$(".liste li:first").css("color","blue").text("İlk Eleman");
+/**
+ * Not filtresi ile seçili değeri hariç tutabiliriz.
+ */
+ $(".liste li:not(:first)").css("font-family","fantasy");
+/***
+ * Contains filtresi arama yapmak için kullanılır.
+ * Büyük küçük harf duyarlıdır.
+ */
+$(".liste li:contains('İ')").css("background-color","yellow");
+
+
+    })
+</script>
+<body>
+    <ul class="liste">
+        <li>1. Eleman</li>
+        <li>2. Eleman</li>
+        <li>3. Eleman</li>
+        <li>4. Eleman</li>
+        <li>5. Eleman</li>
+        <li>6. Eleman</li>
+        <li>7. Eleman</li>
+        <li>8. Eleman</li>
+        <li>9. Eleman</li>
+    </ul>
+</body>
+</html>
