@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+
+            /*
+            * Jquery kendiliğinden seçme özelliğine sahip değildir ve kendine ait bir seçme özelliği de yoktur. Seçim yapmak için css'in kendidne ait seçicisini kullanır.
+            * Bizde burada onu kullancağız. 
+            */
+            $("a,.container, #container,p,button").hide(2000)
+            /**
+            * Jquery'de herşey metodlar üzerine kuruludur ve metodlar kullanılarak işlemler yapılır. Bu örnekte de olduğu gibi de kullanımı mevcuttur.
+            */
+            
+        })
+    </script>
+</head>
+<body>
+    <a href="#">Bu bir link</a>
+    <div class="container">Container classına Sahip Bir Div</div>
+    <div id="container">Container idsine sahip bir div</div>
+    <p>Bu bir parağraf</p>
+    <button>Bu bir button</button>
+</body>
+</html>
