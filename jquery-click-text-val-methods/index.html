@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            $("div.tiklanacakdiv").click(function () {
+                alert("Tıklandı");
+            })
+            $(".liste li").click(function () {
+                // var elemanIci = $(".liste li").html();
+                alert("Elemana Tıklandı");
+                //alert(elemanIci);
+            })
+            /*
+                 $("button").click(function(){
+                 var icerik = $("p").text();
+                 alert(icerik);
+                 $(".tiklanacakdiv").text(icerik);
+             })
+     */
+            $("#veriyiOku").click(function () {
+                var deger = $("#textInput").val();
+                alert(deger);
+                $("#girilenDeger").text(deger);
+            })
+
+
+            $(".image").click(function () {
+                $("img").hide(2000);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button>Veriyi Al</button>
+    <p>Parağraf elementi</p>
+    <div class="tiklanacakdiv">Bu dive tıklanacak</div>
+    <ul class="liste">
+        <li>Lilste elemanı 1</li>
+        <li>Lilste elemanı 2</li>
+        <li>Lilste elemanı 3</li>
+        <li>Lilste elemanı 4</li>
+        <li>Lilste elemanı 5</li>
+
+    </ul>
+
+
+    <input type="text" name="textInput" id="textInput"><button id="veriyiOku">Veriyi Oku</button>
+    <div id="girilenDeger"></div>
+    <img src="https://www.casper.com.tr/uploads/2020/12/casper-nirvana-x500-laptop_h270_op.webp" class="image">
+</body>
+
+</html>
