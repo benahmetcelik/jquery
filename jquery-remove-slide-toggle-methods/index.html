@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+/**
+ * remove();
+ * toggle();
+ * slide();
+ *        slideDown();
+ *        slideUp();
+ *        slideToggle();
+ */
+
+
+$("#diviSil").click(function(){
+    alert("Div silindi");
+    $("#silinecekDiv").remove();
+})
+
+$("#diviGizle").click(function(){
+    alert("Div Gizlendi");
+    $("#gizlenecekDiv").toggle();
+})
+$("#diveSlideUpUygula").click(function(){
+    alert("Dive SlideUp Uygulandı");
+    $("#mySlideDiv").slideUp(500);
+})
+$("#diveSlideDownUygula").click(function(){
+    alert("Dive SlideUp Uygulandı");
+    $("#mySlideDiv").slideDown(500);
+})
+
+
+$("#diveSlideToggleUygula").click(function(){
+    alert("Dive SlideToggle Uygulandı");
+    $("#slideToggle").slideToggle(500);
+})
+
+        })
+    </script>
+</head>
+<style>
+    .myDiv{
+        background-color: lightgrey;
+    width: 40%;
+    border: 25px solid blue;
+    padding: 25px;
+    margin: 25px;
+    }
+    button{
+        background-color: chartreuse;
+        text-align: center;
+        border: 10px solid grey;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 30%;
+        position:relative;
+
+left: 50%;
+
+top: 50%;
+    }
+</style>
+<body>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>
+                <button id="diviSil">Remove()</button>
+            </td>
+        
+            <td>
+                <button id="diviGizle">Toggle()</button>
+            </td>
+            <td>
+                <button id="diveSlideUpUygula">SlideUp()</button>
+                <button id="diveSlideDownUygula">SlideDown()</button>
+
+            </td>
+           
+            <td>
+                <button id="diveSlideToggleUygula">SlideToggle()</button>
+
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div id="silinecekDiv" class="myDiv">Merhaba bu bir silinecek divdir.</div>
+        
+            </td>
+            <td>
+                <div id="gizlenecekDiv" class="myDiv">Merhaba bu bir Gizlencek divdir.</div>
+        
+            </td>
+            <td>
+                <div id="mySlideDiv" class="myDiv">Slide Up/Down Divi</div>
+        
+            </td>
+            <td>
+        <div id="slideToggle" class="myDiv">Slide Toggle Divi</div>
+        
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

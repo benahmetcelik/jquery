@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Document</title>
+    <script>
+        /**
+         * Hover();
+         * size();
+         * fade();
+         *  fadeIn();
+         *  fadeOut();
+         *  fadeTo();
+         *  fadeToggle();
+         */
+
+        $(document).ready(function () {
+            /**
+             * Hover metodu ik parametre alır. bunlardan ilki üzerine geldiğinde çalışacak alandır. ikincisi ise üzerinden gittiğinde çalışacak alandır.
+             * Eğer üzerine geldikten sonra oluşan etkiden sonra üzerinden geçildiğinde başka bir etki yaratmak istiyorsanız ikinci parametreyi gönderebilirsiniz. 
+             * Sadece ilk parametreyi gönderirsek üzerinden geçtiğimizde yaptığımız etki görünmeye devam eder. İkinci parametreyle bu durumu değiştirebiliriz.
+             */
+            $("#hover").hover(function () {
+                $(this).css({
+                    "background-color": "black",
+                    "color": "yellow"
+                })
+                $("#result").text("Hover metodu çalıştı");
+                console.log("Hover çalıştı");
+
+            }, function () {
+                $(this).css({
+                    "background-color": "",
+                    "color": ""
+                })
+            })
+
+            /**
+             * Size metdou saymak için kullanılır. verilen elemandan kaç tane olduğunu bulur.
+             * Burada hover içinde size() metodu kullanılmıştır isterseniz siz değişkene atayabilir veya haricen kullanabilirsiniz.
+             * Değişkene Atama : 
+             * var sayimiz = $("idyadaClass").size();
+             */
+            $("#size").hover(function () {
+                $(this).css({
+                    "background-color": "black",
+                    "color": "yellow"
+                })
+                $("#result").text("Adet Eleman Bulunyor");
+                console.log("Hover çalıştı");
+
+            }, function () {
+                $(this).css({
+                    "background-color": "",
+                    "color": ""
+                })
+            })
+
+
+
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Hover Example</td>
+
+                <td>Size Example</td>
+
+                <td>Fade Metodu</td>
+                <td>Fade In</td>
+                <td>Fade Out</td>
+                <td>Fade To</td>
+                <td>Fade Toggle</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="hover">Buraya Gel Ve Rengim Değişsin</td>
+
+                <td id="size">
+                    <ul id="liste">
+                        <li>Test</li>
+                        <li>Test</li>
+                        <li>Test</li>
+                        <li>Test</li>
+                        <li>Test</li>
+                        <li>Test</li>
+                        <li>Test</li>
+                    </ul>
+
+                </td>
+
+                <td>Fade metodu özellikleri</td>
+                <td>Fade In Özelliğini Test Et</td>
+                <td>Fade Out Özelliğini Test Et</td>
+                <td>Fade To Özelliğini Test Et</td>
+                <td>Fade Toggle Özelliğini Test Et</td>
+            </tr>
+            <tr>
+                <td colspan="7" id="result"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
